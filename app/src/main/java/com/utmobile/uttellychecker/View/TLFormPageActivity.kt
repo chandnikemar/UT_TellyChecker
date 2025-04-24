@@ -418,6 +418,12 @@ class TLFormPageActivity : AppCompatActivity() {
             // Handle the submit action here
         }
         binding.btnSubmit.setOnClickListener {
+            binding.TVtruckLoad.visibility=View.GONE
+            binding.cardTlSpinner.visibility=View.VISIBLE
+            binding.ly2.visibility = View.GONE
+            binding.ly3.visibility = View.VISIBLE
+        }
+        binding.btnSave3.setOnClickListener {
             val vehicleNumber = binding.etVehicleNumber.text.toString()
             val driverName = binding.tvDriverName.text.toString()
             if (selectedLocationCode.isNullOrEmpty()) {
@@ -530,9 +536,9 @@ class TLFormPageActivity : AppCompatActivity() {
         builder.setMessage(message)
         builder.setPositiveButton("OK") { dialog, _ ->
             onConfirm()
-            if (shouldFinish) {
-                finish()
-            }
+//            if (shouldFinish) {
+//                finish()
+//            }
             dialog.dismiss()
         }
         builder.setNegativeButton("Cancel") { dialog, _ ->

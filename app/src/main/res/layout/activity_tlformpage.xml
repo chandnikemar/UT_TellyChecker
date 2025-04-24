@@ -281,10 +281,37 @@
 <!--                </com.google.android.material.textfield.TextInputLayout>-->
 
                 <!-- Spinner -->
+                <LinearLayout
+                    android:id="@+id/TVtruckLoad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/TvtruckloadLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Truck Loader: "
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvtruckLoadValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TL2"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:padding="8dp" />
+                </LinearLayout>
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardTlSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:layout_marginTop="5dp"
                     android:elevation="5dp"
                     app:cardCornerRadius="8dp"
@@ -295,6 +322,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
+
                         android:background="@drawable/spinner_background"
                         android:padding="5dp">
 
@@ -305,6 +333,7 @@
                             android:layout_gravity="center"
                             android:background="@android:color/transparent"
                             android:paddingStart="10dp"
+                            android:imeActionLabel="Select Truck Loader"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -341,6 +370,7 @@ android:paddingTop="@dimen/dimen_5"
 
                         android:background="@drawable/clear_btn_round"
                         android:text="Clear"
+
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -372,7 +402,7 @@ android:paddingTop="@dimen/dimen_5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-android:layout_marginEnd="@dimen/dimen_10"
+                        android:layout_marginEnd="@dimen/dimen_10"
                         android:background="@drawable/clear_btn_round"
                         android:text="Reprint"
                         android:textColor="@color/white"
@@ -387,6 +417,40 @@ android:layout_marginEnd="@dimen/dimen_10"
                         android:layout_marginStart="@dimen/dimen_10"
                         android:background="@drawable/clear_btn_round"
                         android:text="Reassign"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ly3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dimen_5"
+
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCancel3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/dimen_10"
+                        android:background="@drawable/ic_cancelbtn"
+                        android:text="Cancel"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSave3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:background="@drawable/ic_savebtn"
+                        android:text="Save"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="bold" />
